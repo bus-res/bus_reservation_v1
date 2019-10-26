@@ -4,68 +4,109 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="external.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Admin actions</title>
 </head>
 <body>
 
-<h1>Welcome Admin</h1>
+<ul>
+  <li><a href="#about">About  </a></li>
+  <li><a href="#myDashboard">My Dashboard </a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  <li style="float:right"> <div class="dropdown">
+    <button class="dropbtn"  text-transform="uppercase"><a class="active" href="#about"><b> ${ register.firstName } ${ register.lastName }</b></a></button>
+    <div class="dropdown-content">
+      <a href="login.jsp">Logout</a>
+       <!-- <form action="profile.bus"> --><a href="profile.bus">Profile</a><!-- </form> -->
+    </div></div></li>
+    </div></div></li> 
+</ul>
+
+
+
+<h4 class="heading4">Welcome Admin</h4>
 
 <br>
 <hr>
 
-<h4>Please select an action</h4>
+<h4 class="heading4">Please select an action :</h4>
+<center>
+<table border="1px solid blue">
 
+<tr>
+<td>
 <form action = "register.jsp">
-<button type="submit">Add Buses</button>
+<button type="submit" class="button_select">Add Buses</button>
 </form> <br>
+</td>
 
+<td>
 <form action = "search.jsp">
-<button type="submit">Search Buses</button>
+<button type="submit" class="button_select">Search Buses</button>
 </form><br>
+</td>
+</tr>
 
+<tr>
+<td>
 <form action = "busdetails.lti">
-<button type="submit">Show All Buses</button>
+<button type="submit" class="button_select">Show All Buses</button>
 </form><br>
-
+</td>
+<td>
 <form action = "delete.jsp">
-<button type="submit">Delete Buses</button>
+<button type="submit" class="button_select">Delete Buses</button>
 </form><br>
+</td>
+</tr>
 
-
+<tr>
+<td>
 <form action = "routeregister.jsp">
-<button type="submit">Add Route</button>
+<button type="submit" class="button_select">Add Route</button>
 </form><br>
-
-
+</td>
+<td>
 <form action = "routesearchform.jsp">
-<button type="submit">Search Route from Source</button>
+<button type="submit" class="button_select">Search Route from Source</button>
 </form><br>
-
-
+</td>
+</tr>
+<tr>
+<td>
 <form action = "driverregister.jsp">
-<button type="submit">Add new driver</button>
+<button type="submit" class="button_select">Add new driver</button>
 </form><br>
-
-
+</td>
+<td>
 <form action = "driversearch.jsp">
-<button type="submit">Search Driver details</button>
+<button type="submit" class="button_select">Search Driver details</button>
 </form><br>
+</td>
+</tr>
 
-
+<tr>
+<td>
 <form action = "driverdeleteform.jsp">
-<button type="submit">Delete Driver details</button>
+<button type="submit" class="button_select">Delete Driver details</button>
 </form><br>
-
-
+</td>
+<td>
 <form action = "driverdetails.lti">
-<button type="submit">Get Driver details</button>
+<button type="submit" class="button_select">Get Driver details</button>
 </form><br>
-
-
+</td>
+</tr>
+<tr>
+<td>
 <form action = "userdetails.lti">
-<button type="submit">Get All User Details</button>
+<button type="submit" class="button_select">Get All User Details</button>
 </form><br>
+</td>
+</tr>
+</table>
 
-
+</center>
 </body>
 </html>

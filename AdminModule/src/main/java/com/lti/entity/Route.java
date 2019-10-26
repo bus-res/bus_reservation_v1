@@ -23,6 +23,8 @@ public class Route {
 	@Column(name = "ROUTE_ID")
 	private int rid;
 	
+	@Column(name = "BUS_SR_ID")
+	private int busSrId;
 	
 	@Column(name = "R_SOURCE")
 	private String source;
@@ -37,6 +39,12 @@ public class Route {
 	private int price;
 	
 	
+	public int getBusSrId() {
+		return busSrId;
+	}
+	public void setBusSrId(int busSrId) {
+		this.busSrId = busSrId;
+	}
 	public int getRid() {
 		return rid;
 	}

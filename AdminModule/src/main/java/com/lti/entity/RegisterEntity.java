@@ -5,80 +5,82 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table (name = "AUTH_USER")
-public class Users {
-
-	
-	
+@Table(name="AUTH_USER")
+public class RegisterEntity {
 
 	@Id
 	@GenericGenerator(name = "hibernate_sequence", strategy = "sequence", parameters = {
             @org.hibernate.annotations.Parameter(name = "sequenceName", value = "sequence"),
             @org.hibernate.annotations.Parameter(name = "allocationSize", value = "1001"),
     })
-	
-	 @GeneratedValue(generator = "sequence", strategy=GenerationType.SEQUENCE)
-		@Column(name = "user_id")
-	private int userId;
+    @GeneratedValue(generator = "sequence", strategy=GenerationType.SEQUENCE)
+	@Column(name="USER_ID")
+	private int userid;
 	
 	
 	@Column(name="firstname")
-	private String fName;
-	
+	private String firstName;
 	
 	@Column(name="lastname")
-	private String lName;
+	private String lastName;
 	
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="password")
+	private String password;
+	
 	@Column(name="contact")
 	private long contact;
-
-	public int getUserId() {
-		return userId;
+		
+	public int getUserid() {
+		return userid;
 	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
-
-	public String getfName() {
-		return fName;
+	
+	public String getFirstName() {
+		return firstName;
 	}
-
-	public void setfName(String fName) {
-		this.fName = fName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-
-	public String getlName() {
-		return lName;
+	public String getLastName() {
+		return lastName;
 	}
-
-	public void setlName(String lName) {
-		this.lName = lName;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public long getContact() {
 		return contact;
 	}
-
 	public void setContact(long contact) {
 		this.contact = contact;
 	}
+	
+	
+	
+	
+	
 	
 	
 }
